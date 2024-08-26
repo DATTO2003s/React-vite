@@ -1,3 +1,6 @@
+
+import './style.css'
+
 const SecondComponent = () => {
     return (
         <div>
@@ -7,9 +10,14 @@ const SecondComponent = () => {
 }
 const ThirdComponent = () => {
     return (
-        <div>
-            Third Components=
-        </div>
+        <>
+            <div className="child">sa</div>
+            <div className="child1" style={
+                {borderRadius: "10px",backgroundColor: "red"}
+                
+                }>sb</div>
+
+        </>
     );
 }
 export { SecondComponent, ThirdComponent };
