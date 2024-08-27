@@ -1,0 +1,39 @@
+.todo-container{    
+    height: 500px;
+    display: flex;
+    
+    justify-content: center;    
+    align-items: start;
+   
+}
+.todo-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+}
+.todo-form{
+    display: flex; 
+    
+    justify-content: center;
+}
+.todo-title{
+    height: 20px;
+    font-size: 20px;
+    color: red;
+    margin: 20px 0 10px 0;
+    text-align: center;
+}  
+
+
+.list-container{
+    margin-top: 10px;
+    display: flex;
+    border: 2px solid red;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.list-info{
+    margin: 10px 0 10px 5px;
+}
