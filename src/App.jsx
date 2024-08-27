@@ -5,8 +5,8 @@ import reactLogo from './assets/react.svg';
 import { useState } from 'react';
 const App = () => {
   const [todoList, setTodoList] = useState([
-    {id :1,name: "Learn react" },
-    {id :2,name: "Watching Youtube" }
+    { id: 1, name: "Learn react" },
+    { id: 2, name: "Watching Youtube" }
   ]);
 
 
@@ -17,7 +17,15 @@ const App = () => {
     country: "VN"
   }
   const addNewTodo = (name) => {
-    alert(`call me ${name}`)
+    const newToDo = {
+      id: randomIntFromInterval(1,10000),
+      name: name
+    }
+    //syntax js spread syntax
+    setTodoList([...todoList, newToDo])
+    function randomIntFromInterval(min, max) { // min and max included
+      return Math.floor(Math.random() * (max - min + 1) + min);
+      }
   }
 
   return (
@@ -32,7 +40,7 @@ const App = () => {
             name={datto}
             age={age}
             data={data}
-            todoList= {todoList}
+            todoList={todoList}
           />
           <div className='todo-image'>
             <img src={reactLogo} alt="" />

@@ -11,7 +11,8 @@ const Todonew = (props) => {
     // addNewTodo("Hoang Tien Dat")
 
     const handleClick = () => {
-        console.log(">>> Check Value", valueInput)
+        addNewTodo(valueInput)
+        
     }
     const handleOnChange = (name) => {
         setValueInput(name)
