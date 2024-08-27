@@ -37,3 +37,8 @@
 .list-info{
     margin: 10px 0 10px 5px;
 }
+.todo-Item{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
