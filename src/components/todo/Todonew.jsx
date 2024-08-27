@@ -1,23 +1,32 @@
+import { useState } from "react"
+
 const Todonew = (props) => {
-    console.log(">>>check point", props)
+
+    //useState hook
+    // const valueInput = "Dat"
+    const [valueInput, setValueInput] = useState("Erik")
+
 
     const { addNewTodo } = props
     // addNewTodo("Hoang Tien Dat")
 
     const handleClick = () => {
-        alert("Click me")
+        console.log(">>> Check Value", valueInput)
     }
     const handleOnChange = (name) => {
-        console.log(">>>>HandleOnchange",name)
+        setValueInput(name)
     }
     return (
         <div className='todo-form'>
             <input type="text"
-                onChange={(event) => {handleOnChange(event.target.value)}}
-                />
+                onChange={(event) => { handleOnChange(event.target.value) }}
+            />
             <button style={{ cursor: "pointer" }}
-                onClick = {handleClick}
+                onClick={handleClick}
             >Add</button>
+            <div>
+                MY tex input is = {valueInput}
+            </div>
         </div>
     )
 }
